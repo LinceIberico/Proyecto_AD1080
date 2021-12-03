@@ -1,0 +1,57 @@
+a {
+    text-decoration: none !important;
+}
+
+.font-size-h1 {
+    font-size: 1.7rem;
+    color: #000000 !important;
+    text-align: center;
+}
+
+.font-size-h2 {
+    font-size: 1.5rem;
+    color: #17a2b8 !important;
+}
+
+.font-size-h3 {
+    font-size: 1.5rem;
+    color: #dc3545 !important;
+}
+
+.font-size-p {
+    font-size: 1.3rem;
+}
+
+.text-resalto {
+    color: #145763 !important;
+    font-weight: 600;
+}
+
+.centrar-logo {
+    margin-left: 37%;
+}
+
+
+/*ESTILOS MODAL */
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 2px;
+    background-color: #000000 !important;
+    border: 1px solid #dc3545;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.imagen-fondo {
+    background-image: url('../img/corazon_roto.png');
+}
+
+
+/* FONDO PAGINA PRINCIPAL */
+
+.imagen-fondo-pagina-principal {
+    display: none !important;
+    @media (min-width: 768px) {
+        display: none !important;
+    }
+}

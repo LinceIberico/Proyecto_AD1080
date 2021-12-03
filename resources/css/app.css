@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+/* @import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap';
+@import 'bootstrap/dist/js/bootstrap.bundle.min'; */
+
+
+/* Para el CSS de Bulma */
+
+
+/* @import 'bulma/css/bulma-rtl';
+@import 'bulma/css/bulma';
+@import 'bulma/sass/base';
+@import 'bulma/sass/components';
+@import 'bulma/sass/elements';
+@import 'bulma/sass/form';
+@import 'bulma/bulma.sass'; */
