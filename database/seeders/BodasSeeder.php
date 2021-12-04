@@ -16,6 +16,7 @@ class BodasSeeder extends Seeder
     {
         $boda = new Boda();
 
+        $boda->idUserFK = 1;
         $boda->nomBoda = 'Cristina & Gabriel';
         $boda->fechaBoda = '2021-09-11';
         $boda->horaBoda = '12:30:00';
