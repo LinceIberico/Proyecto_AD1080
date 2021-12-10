@@ -263,7 +263,7 @@ return [
         [
             'text' => 'Actualizaciones',
             'url'  => 'admin/cms',
-            'icon' => 'fas fa-info',
+            'icon' => 'fas fa-fw fa-info',
             'icon_color' => 'warning',
         ],
         ['header' => 'USUARIOS'],
