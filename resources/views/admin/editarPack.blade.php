@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js" defer></script>
         <script src="{{ asset('js/formulario_EditarPack.js') }}" defer></script>
+        <script src="https://unpkg.com/sweetalert2@9.5.3/dist/sweetalert2.all.min.js" defer></script>
+        <script src="{{ asset('js/formulario_NuevoPack.js') }}" defer></script>
 
         @livewireStyles
 @section('content_header')
@@ -21,7 +23,7 @@
     <div class="card-body">    
     <form id="formulario_EditarPack" class="formulario_EditarPack" action="{{route('packs.update',$pack)}}" method="POST">
         @csrf  
-        @method('put')     
+        @method('put')        
 
         <div class="lg:w-3/4 sm:w-auto mx-auto">         
           <div class="step-content has-text-centered is-active">
@@ -117,12 +119,24 @@
                               </span>
                               <span>Volver</span>
                             </button>
+                          </form>
+                          
+                          <form id="formulario_EliminarPack" class="formulario_EliminarPack" action="{{route('packs.destroy',$pack)}}" method="GET">
+                            @csrf
+                            @method('GET')
+                          <button class="button btn-danger is-rounded mb-1" type="submit" data-toggle="modal" data-target="#myModal" id="btnEliminarPack" name="btnEliminarPack">
+                            <span class="icon is-small">
+                              <i class="fas fa-trash"></i>
+                            </span>
+                            <span>Eliminar</span>
+                          </button>
+                          </form>
+                          
                           </div>
                         </div>
                         
                       </div>
                     </div>
-    </form>
   </div>
 </div>
 

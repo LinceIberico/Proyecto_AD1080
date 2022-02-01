@@ -51,7 +51,7 @@
                             <th>Vigente</th>
                             <th>Fecha de Alta</th>
                             <th>Última Actualización</th>
-                            <th width="100px" class="no-exportar">Acciones</th>
+                            <th width="100px" class="no-exportar">Editar</th>
                             
                         </thead>                        
                     </table>            
@@ -102,7 +102,7 @@
             {data:'vigente', name:'vigente'},
             {data:'created_at', name:'created_at'},
             {data:'updated_at', name:'updated_at'},
-            {data:'editar', name:'editar','width':'100px', orderable: false, searchable: false},
+            {data:'editar', name:'editar','width':'100px', orderable: false, searchable: false},            
             
             ],
 

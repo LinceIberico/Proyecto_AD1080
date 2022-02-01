@@ -18,44 +18,14 @@ class AdminPresupuestoController extends Controller
 {
     public function index(Request $request){ 
 
-        // $presupuesto = Presupuesto::join('linea_presupuesto','linea_presupuesto.idPresupuestoFK','=','presupuestos.id')
-        // ->join('bodas','bodas.id','=','presupuestos.idBodaFK')
-        // ->join('packs','packs.id','=','presupuestos.idPackFK')
-        // ->join('promocions','promocions.id','=','presupuestos.idPromoFK')
-        // ->join('extras','extras.id','=','linea_presupuesto.idExtraFK')        
-        // ->select('nomPresupuesto','fechaPresupuesto','precioTotal','observaciones','pagado','nomBoda','fechaBoda','nomPack','nomExtra','nomPromo')->where('presupuestos.id',2)->distinct()->get();
-        // return $presupuesto;
         if ($request->ajax()) {
-
-            // $data2 = DB::select('SELECT lp.idPresupuestoFK , e.nomExtra FROM presupuestos pre, linea_presupuesto lp, extras e 
-            //                     WHERE pre.id = lp.idPresupuestoFK AND lp.idExtraFK = e.id');
-
-            // $data = DB::select('SELECT DISTINCTROW pre.id, pre.nomPresupuesto, pre.fechaPresupuesto, pre.precioTotal, pre.observaciones,pre.pagado, b.nomBoda, b.fechaBoda,p.nomPack, pro.nomPromo, pre.updated_at 
-            //                     FROM presupuestos pre 
-            //                     INNER JOIN bodas b ON b.id = pre.idBodaFK 
-            //                     INNER JOIN packs p ON p.id = pre.idPackFK 
-            //                     INNER JOIN promocions pro ON pro.id = pre.idPromoFK');
-                                // INNER JOIN linea_presupuesto lp ON lp.idPresupuestoFK = pre.id 
-                                // INNER JOIN extras e ON e.id = lp.idExtraFK');
-                                $data = DB::select('SELECT DISTINCTROW pre.id, pre.nomPresupuesto, pre.fechaPresupuesto, pre.precioTotal, pre.observaciones,pre.pagado, b.nomBoda, b.fechaBoda,p.nomPack, pro.nomPromo, pre.updated_at 
+                $data = DB::select('SELECT DISTINCTROW pre.id, pre.nomPresupuesto, pre.fechaPresupuesto, pre.precioTotal, pre.observaciones,pre.pagado, b.nomBoda, b.fechaBoda,p.nomPack, pro.nomPromo, pre.updated_at 
                                 FROM presupuestos pre 
                                 INNER JOIN bodas b ON b.id = pre.idBodaFK 
                                 INNER JOIN packs p ON p.id = pre.idPackFK 
                                 INNER JOIN promocions pro ON pro.id = pre.idPromoFK
-                                ORDER BY pre.id DESC');
-
-            // $data = DB::select('SELECT DISTINCTROW pre.id, pre.nomPresupuesto, pre.fechaPresupuesto, pre.precioTotal, pre.observaciones,pre.pagado, b.nomBoda, b.fechaBoda,p.nomPack,pro.nomPromo, pre.updated_at
-            //                     FROM presupuestos pre
-            //                     INNER JOIN bodas b ON b.id = pre.idBodaFK
-            //                     INNER JOIN packs p ON p.id = pre.idPackFK
-            //                     INNER JOIN promocions pro ON pro.id = pre.idPromoFK');
-            
-            // $extras = DB::select("SELECT lp.idPresupuestoFK , e.nomExtra FROM presupuestos pre, linea_presupuesto lp, extras e 
-            //                     WHERE pre.id = lp.idPresupuestoFK AND lp.idExtraFK = e.id AND lp.idPresupuestoFK = '".$data['id']."'");
-
-            
-
-            //$data = DB::select('SELECT pre.id, pre.nomPresupuesto, pre.fechaPresupuesto, pre.precioTotal, pre.observaciones, pre.pagado, b.nomBoda, b.fechaBoda, p.nomPack, e.nomExtra, pre.nomPromo, pre.updated_at FROM presupuestos pre INNER JOIN bodas b ON pre.idBodaFK = b.id INNER JOIN packs p ON pre.idPackFK = p.id INNER JOIN linea_presupuesto lp ON pre.id = lp.idPresupuestoFK INNER JOIN extras e ON e.id = lp.idExtraFK');
+                                ORDER BY pre.id DESC');            
+           
             return Datatables::of($data)                    
 
                     ->addIndexColumn()
@@ -88,7 +58,6 @@ class AdminPresupuestoController extends Controller
 
     public function create(){
 
-        //$bodas = Boda::orderBy('id', 'DESC')->get();
         $bodas = DB::select('SELECT b.id, b.nomBoda, b.fechaBoda FROM bodas b LEFT JOIN presupuestos p ON p.idBodaFK = b.id WHERE p.idBodaFK is null');
         $packs = Pack::where('vigente','SI')->get();
         $extras = Extra::where('vigente','SI')->get();

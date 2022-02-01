@@ -89,6 +89,8 @@ Route::middleware(['auth', 'comprobar.admin'])->group(function () {
     
     Route::put('/editar-pack/{pack}',[AdminPackController::class, 'update'])->name('packs.update');
     
+    Route::get('/eliminar-pack/{pack}',[AdminPackController::class, 'destroy'])->name('packs.destroy');
+    
     //EXTRAS
     
     Route::get('/extras',[AdminExtraController::class, 'index'])->name('extras.index');

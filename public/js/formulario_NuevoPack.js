@@ -3,7 +3,6 @@
 //BOTONES
 
 $("#btnNuevoPack").click(validarNuevoPack);
-// $("#btnPasarAPresupuesto").click(cambiarAFormularioPresupuesto);
 
 
 $(document).ready(function() {
@@ -99,4 +98,4 @@ function validarNuevoPack(evento) {
     }
 
 }
-console.log("JS NUEVA PROMOCION CARGADO CON EXITO");
+console.log("JS NUEVO PACK CARGADO CON EXITO");

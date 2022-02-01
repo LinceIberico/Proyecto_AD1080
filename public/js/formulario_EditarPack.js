@@ -3,6 +3,8 @@
 //BOTONES
 
 $("#btnEditarPack").click(validarEditarPack);
+$("#btnEliminarPack").click(eliminarPack);
+var form = $(this).parents('formulario_EditarPack');
 
 
 $(document).ready(function() {
@@ -96,6 +98,36 @@ function validarEditarPack(evento) {
             },
         });
     }
+
+}
+
+function eliminarPack(evento) {
+    evento.preventDefault();
+
+    Swal
+        .fire({
+            title: "Se va a eliminar el paquete",
+            text: "Una vez eliminado no podrán recuperarse los datos",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar",
+        })
+        .then(resultado => {
+            if (resultado.value) {
+                // Hicieron click en "Sí"
+                swal.fire({
+                    text: 'Pack Eliminado con Éxito',
+                    icon: 'success',
+                    //confirmButtonText: "Aceptar",
+                    //timer: 5000,
+                    buttons: {
+                        confirm: { text: 'OK' },
+                    },
+                });
+                setTimeout(function() { formulario_EliminarPack.submit() }, 1500);
+            }
+        });
 
 }
 console.log("JS EDITAR PACK CARGADO CON EXITO");

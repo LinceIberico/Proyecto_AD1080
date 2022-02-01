@@ -20,7 +20,7 @@ class AdminPackController extends Controller
 
                     ->addIndexColumn()
 
-                    ->addColumn('editar', '<div class="d-flex flex-wrap"><a href="{{route(\'packs.edit\',$id)}}" class="btn btn-info mx-auto" ><i class="fas fa-edit"></i> Editar</a></div>')
+                    ->addColumn('editar', '<div class="d-flex flex-wrap"><a href="{{route(\'packs.edit\',$id)}}" class="btn btn-info mx-auto" ><i class="fas fa-edit"></i> Editar</a></div>')                    
                     // <a href="{{route(\'editar-promocion.edit\',$id)}}" class="button" <span class="icon is-small"><i class="fas fa-edit"></i> Editar</span> </a> 
                     // <button class="btn btn-lg" style="background-color:transparent;"><i class="fa fa-pencil"></i> Edit</button>
                     ->rawColumns(['editar'])
@@ -66,6 +66,14 @@ class AdminPackController extends Controller
         $pack->vigente = $request->vigente;
 
         $pack->update();
+
+        return redirect()->route('packs.index');
+    }
+
+    public function destroy($id){
+
+        $data = Pack::findOrFail($id);
+        $data->delete();
 
         return redirect()->route('packs.index');
     }

@@ -16,7 +16,6 @@ class AdminBodaController extends Controller
 {
     public function index(Request $request){ //Aqui vamos a retornar a la vista del admin
 
-        //$bodas = DB::select('SELECT b.id, u.name, b.nomBoda, b.fechaBoda, b.horaBoda, b.nomNovio, b.nomNovia, b.dirNovio, b.dirNovia, b.tlfNovio, b.tlfNovia, b.emailNovio, b.emailNovia, b.ceremonia, b.celebracion, b.descripcion, b.created_at, b.updated_at  FROM bodas b, users u WHERE u.id = b.idUserFK');
         if ($request->ajax()) {
 
             $data = DB::select('SELECT b.id, u.name, b.nomBoda, b.fechaBoda, b.horaBoda, b.nomNovio, b.nomNovia, b.dirNovio, b.dirNovia, b.tlfNovio, b.tlfNovia, b.emailNovio, b.emailNovia, b.ceremonia, b.celebracion, b.descripcion, b.created_at, b.updated_at  FROM bodas b, users u WHERE u.id = b.idUserFK');
