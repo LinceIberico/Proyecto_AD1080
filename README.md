@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-<p align="center">Este proyecto lo he realizado para ir aprendiendo sobre laravel 8, puede haber contenido duplicado y de maneras diferentes para hacer lo mismo para tenerlo como
+<p align="left">Este proyecto lo he realizado para ir aprendiendo sobre laravel 8, puede haber contenido duplicado y de maneras diferentes para hacer lo mismo para tenerlo como
 aprendizaje</p>
-<p align="center">Este proyecto está en constante evolución pues iré cambiando y mejorando el código así como añadir nuevas funciones</p>
+<p align="left">Este proyecto está en constante evolución pues iré cambiando y mejorando el código así como añadir nuevas funciones</p>
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
