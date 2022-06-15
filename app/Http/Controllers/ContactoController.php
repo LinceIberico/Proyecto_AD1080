@@ -26,7 +26,7 @@ class ContactoController extends Controller
             'mensajeContacto' => 'required',
         ]);
         
-        $emailEmpresa = 'admin@gmail.com';
+        $emailEmpresa = 'adriansanchezmillan@gmail.com';
         $emailUsuario = $request->email;
 
         $destinatario = [ $emailEmpresa  , $emailUsuario];
