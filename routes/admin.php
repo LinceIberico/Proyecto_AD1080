@@ -2,15 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminUserController;
-use App\Http\Controllers\admin\AdminUsuarioController;
-use App\Http\Controllers\admin\AdminPackController;
-use App\Http\Controllers\admin\AdminExtraController;
+use App\Http\Controllers\Admin\AdminUsuarioController;
+use App\Http\Controllers\Admin\AdminPackController;
+use App\Http\Controllers\Admin\AdminExtraController;
 use App\Http\Controllers\Admin\AdminPromocionController;
-use App\Http\Controllers\admin\AdminBodaController;
+use App\Http\Controllers\Admin\AdminBodaController;
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\admin\AdminPresupuestoController;
-use App\Http\Controllers\admin\AdminEmpleadoController;
-use App\Http\Controllers\admin\AdminMailController;
+use App\Http\Controllers\Admin\AdminPresupuestoController;
+use App\Http\Controllers\Admin\AdminEmpleadoController;
+use App\Http\Controllers\Admin\AdminMailController;
 
 
 // Route::middleware(['comprobar.admin'])->get('/cms', function () { //Aqui comprobamos que el usuario registrado es admin o no. 
