@@ -13,7 +13,7 @@ class AdminMailController extends Controller
 {
     public function enviarMailBodaEmpleado(Request $request){        
         
-        $emailEmpresa = 'admin@gmail.com';
+        $emailEmpresa = 'adriansanchezmillan@gmail.com';
         $emailUsuarios = $request->emailUsuarios;
         $boda = Boda::where('id',$request->comboBodaEmpleado)->get();
 
