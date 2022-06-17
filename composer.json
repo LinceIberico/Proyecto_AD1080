@@ -6,8 +6,9 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "barryvdh/laravel-dompdf": "^0.9.0",
         "ext-gd": "*",
+        "barryvdh/laravel-dompdf": "^0.9.0",
+        "fakerphp/faker": "^1.9.1",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -17,8 +18,7 @@
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.5",
-        "yajra/laravel-datatables-oracle": "^9.18",
-        "fakerphp/faker": "^1.9.1"
+        "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
